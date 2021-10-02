@@ -6,10 +6,10 @@
 
 2 - Clone this project repository
 ```
-git clone
+git clone https://github.com/gregumo/dc-test
 ````
 
-3 - Install Laravel dependencies with Composer (and without Sail)
+3 - In your application folder, install Laravel dependencies with Composer (and without Sail)
 ```
 docker run --rm \
     -u "$(id -u):$(id -g)" \
