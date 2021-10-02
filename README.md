@@ -19,27 +19,32 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 
-4 - Launch Docker images with Sail
+4 - Copy env example file
+```
+cp .env.example .env
+```
+
+5 - Launch Docker images with Sail
 ```
 ./vendor/bin/sail up -d
 ```
 
-5 - Install node dependencies
+6 - Install node dependencies
 ```
 ./vendor/bin/sail npm install
 ```
 
-6 - Setup database
+7 - Setup database
 ```
-./vendor/bin/sail php artisan migration:install
+./vendor/bin/sail php artisan migrate
 ```
 
-7 - Fetch data from Nantes Metropole API
+8 - Fetch data from Nantes Metropole API
 ```
 ./vendor/bin/sail php artisan fetch:composters
 ```
 
-8 - Go to your application root url 
+9 - Go to your application root url 
 ```
 http://localhost
 ```
