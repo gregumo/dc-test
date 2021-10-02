@@ -29,9 +29,9 @@ cp .env.example .env
 ./vendor/bin/sail up -d
 ```
 
-6 - Install node dependencies
+6 - Generate application encryption key
 ```
-./vendor/bin/sail npm install
+./vendor/bin/sail php artisan key:generate
 ```
 
 7 - Setup database
@@ -39,12 +39,17 @@ cp .env.example .env
 ./vendor/bin/sail php artisan migrate
 ```
 
-8 - Fetch data from Nantes Metropole API
+8 - Install node dependencies
+```
+./vendor/bin/sail npm install
+```
+
+9 - Fetch data from Nantes Metropole API
 ```
 ./vendor/bin/sail php artisan fetch:composters
 ```
 
-9 - Go to your application root url 
+10 - Go to your application root url 
 ```
 http://localhost
 ```
